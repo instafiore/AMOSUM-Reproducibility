@@ -14,7 +14,7 @@ cd ..
 
 # using clingo 5.4.0
 
-# running an instance with propagator:
+# running an instance with amosum propagator:
 ./clingo <problem>/<instance.asp> <problem>/encoding_with_group_ge_amo.asp --output=smodels | wasp --interpreter=python --script- directory=amosum --plugins-file="amosum -id <ID> -min_r [default|min|cmin] [-write_stats_reason]"
 
 # example with Knapsack default
@@ -36,13 +36,13 @@ cd ..
 
 
 # running an instance with clingo:
-./clingo <problem>/<instance.asp> <problem>/encoding.asp --outf=1
+./clingo <problem>/<instance.asp> <problem>/encoding_amo.asp --outf=1
 
 # example
-./clingo Knapsack/0000-knapsack-10-22288-53089-type1.asp Knapsack/encoding.asp --outf=1
+./clingo Knapsack/0000-knapsack-10-22288-53089-type1.asp Knapsack/encoding_amo.asp --outf=1
 
 # running an instance with wasp:
-./clingo <problem>/<instance.asp> <problem>/encoding.asp --output=smodels | wasp 
+./clingo <problem>/<instance.asp> <problem>/encoding_amo.asp --output=smodels | wasp 
 
 # example
-./clingo Knapsack/0000-knapsack-10-22288-53089-type1.asp Knapsack/encoding.asp --output=smodels | wasp
+./clingo Knapsack/0000-knapsack-10-22288-53089-type1.asp Knapsack/encoding_amo.asp --output=smodels | wasp
