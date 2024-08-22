@@ -29,6 +29,7 @@ cd ..
 
 
 # example with Knapsack writing statistics
+## note that the output will be <p,c> where p is the sum percentage of reduction for all reasons and c is the number of reasons. To compute the mean: m=p/c
 ./clingo Knapsack/0000-knapsack-10-22288-53089-type1.asp Knapsack/encoding_with_group_ge_amo.asp --output=smodels | wasp --interpreter=python --script-directory=amosum --plugins-file="amosum -id 1 -min_r min -write_stats_reason"
 
 # example with Graph Colouring cardinality minimal reason, writing statistics
